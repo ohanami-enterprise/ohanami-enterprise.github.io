@@ -1,7 +1,8 @@
 baseURL = "https://ohanami-enterprise.github.io/"
-languageCode = "ja"
+locale = "ja"
 title = "合同会社おはなみエンタープライズ"
 enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
 
 [params]
   companyName = "合同会社おはなみエンタープライズ"

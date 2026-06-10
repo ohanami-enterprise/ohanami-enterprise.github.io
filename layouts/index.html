@@ -12,7 +12,7 @@
     <div class="wrap">
       <h1 class="hero__brand">{{ site.Params.companyName }}</h1>
     </div>
-    <div class="hero__cats" aria-hidden="true">
+    <div class="hero__cats">
       <!-- 大きい方：白茶の牛柄・短く太い鍵尻尾 -->
       <svg viewBox="0 0 100 130" width="118" height="153" role="img" aria-label="白茶の猫">
         <path d="M66 114 C75 114 78 106 75 101 L80 98" fill="none" stroke="#fdfcf8" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
@@ -55,11 +55,11 @@
       <h2 class="about__title">会社概要<span>ABOUT</span></h2>
       <table class="about__table">
         <tbody>
-          <tr><th>商号</th><td>{{ site.Params.companyName }}</td></tr>
-          <tr><th>設立</th><td>{{ site.Params.established }}</td></tr>
-          <tr><th>代表社員</th><td>{{ site.Params.representative }}</td></tr>
-          <tr><th>資本金</th><td>{{ site.Params.capital }}</td></tr>
-          <tr><th>事業内容</th><td>{{ site.Params.business }}</td></tr>
+          <tr><th scope="row">商号</th><td>{{ site.Params.companyName }}</td></tr>
+          <tr><th scope="row">設立</th><td>{{ site.Params.established }}</td></tr>
+          <tr><th scope="row">代表社員</th><td>{{ site.Params.representative }}</td></tr>
+          <tr><th scope="row">資本金</th><td>{{ site.Params.capital }}</td></tr>
+          <tr><th scope="row">事業内容</th><td>{{ site.Params.business }}</td></tr>
         </tbody>
       </table>
     </section>
