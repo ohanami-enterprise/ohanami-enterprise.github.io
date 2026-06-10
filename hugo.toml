@@ -1,0 +1,12 @@
+baseURL = "https://ohanami-enterprise.github.io/"
+languageCode = "ja"
+title = "合同会社おはなみエンタープライズ"
+enableRobotsTXT = true
+
+[params]
+  companyName = "合同会社おはなみエンタープライズ"
+  established = "2026年（登記完了後に確定）"
+  representative = "松下永壽"
+  capital = "500,000円"
+  business = "ソフトウェア・ハードウェアの企画／開発／コンサルティング"
+  description = "合同会社おはなみエンタープライズ — ソフトウェア・ハードウェアの企画／開発／コンサルティング"
