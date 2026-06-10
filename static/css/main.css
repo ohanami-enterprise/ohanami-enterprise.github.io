@@ -94,3 +94,23 @@ body {
   color: var(--color-text-sub);
   border-top: 1px solid var(--color-line);
 }
+
+/* スマホ: 猫を縮小し、会社概要テーブルを縦並びに */
+@media (max-width: 640px) {
+  .hero { min-height: 70vh; }
+  .hero__cats svg:first-child { width: 84px; height: 109px; }
+  .hero__cats svg:last-child  { width: 66px; height: 86px; }
+
+  .about__table th,
+  .about__table td {
+    display: block;
+    width: 100%;
+    padding: 6px 4px;
+  }
+  .about__table th {
+    border-bottom: none;
+    padding-top: 16px;
+    color: var(--color-accent-deep);
+  }
+  .about__table td { padding-bottom: 16px; }
+}
