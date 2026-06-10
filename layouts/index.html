@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.Title }}</title>
+  <meta name="description" content="{{ site.Params.description }}">
+  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <h1 class="hero__brand">{{ site.Params.companyName }}</h1>
+    </div>
+    <div class="hero__cats" aria-hidden="true">
+      <!-- CATS_PLACEHOLDER (Task 4 で差し替え) -->
+      <div style="width:118px;height:153px;background:#eadfce;"></div>
+      <div style="width:92px;height:120px;background:#e0d3bf;"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="about wrap">
+      <h2 class="about__title">会社概要<span>ABOUT</span></h2>
+      <table class="about__table">
+        <tbody>
+          <tr><th>商号</th><td>{{ site.Params.companyName }}</td></tr>
+          <tr><th>設立</th><td>{{ site.Params.established }}</td></tr>
+          <tr><th>代表社員</th><td>{{ site.Params.representative }}</td></tr>
+          <tr><th>資本金</th><td>{{ site.Params.capital }}</td></tr>
+          <tr><th>事業内容</th><td>{{ site.Params.business }}</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">© {{ now.Year }} {{ site.Params.companyName }}</div>
+  </footer>
+</body>
+</html>
