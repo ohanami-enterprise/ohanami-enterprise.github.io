@@ -12,8 +12,3 @@
 hugo server
 # http://localhost:1313
 ```
-
-## 設計・計画ドキュメント
-
-- 設計書: `docs/superpowers/specs/2026-06-10-corporate-site-design.md`
-- 実装計画: `docs/superpowers/plans/2026-06-10-corporate-site.md`
