@@ -9,6 +9,20 @@
 </head>
 <body>
   <header class="hero">
+    <div class="hero__bubbles" aria-hidden="true">
+      {{/* 桜（さくら）の花 */}}
+      {{ $sakura := `<svg viewBox="0 0 40 40"><g fill="#f6bcca" stroke="#e89aab" stroke-width="1"><path d="M20 19 C13 14 14 6 18 3 C19 5 21 5 22 3 C26 6 27 14 20 19Z"/><path d="M20 19 C13 14 14 6 18 3 C19 5 21 5 22 3 C26 6 27 14 20 19Z" transform="rotate(72 20 20)"/><path d="M20 19 C13 14 14 6 18 3 C19 5 21 5 22 3 C26 6 27 14 20 19Z" transform="rotate(144 20 20)"/><path d="M20 19 C13 14 14 6 18 3 C19 5 21 5 22 3 C26 6 27 14 20 19Z" transform="rotate(216 20 20)"/><path d="M20 19 C13 14 14 6 18 3 C19 5 21 5 22 3 C26 6 27 14 20 19Z" transform="rotate(288 20 20)"/></g><circle cx="20" cy="20" r="3" fill="#f4d35e"/></svg>` }}
+      {{/* 猫の顔A：白茶の牛柄（片耳が茶・右頬に茶ぶち） */}}
+      {{ $catA := `<svg viewBox="0 0 44 44"><path d="M9 15 L7 3 L18 12Z" fill="#fdfcf8" stroke="#c9bba8" stroke-width="1.2"/><path d="M35 15 L37 3 L26 12Z" fill="#d99b5f" stroke="#c9bba8" stroke-width="1.2"/><circle cx="22" cy="24" r="14" fill="#fdfcf8" stroke="#c9bba8" stroke-width="1.4"/><path d="M26 13 C34 13 37 21 33 29 C29 30 26 25 25 20 C24 16 24 14 26 13Z" fill="#e0a366"/><path d="M15 24 q3 3 6 0" fill="none" stroke="#3a2f2a" stroke-width="1.8" stroke-linecap="round"/><path d="M23 24 q3 3 6 0" fill="none" stroke="#3a2f2a" stroke-width="1.8" stroke-linecap="round"/><path d="M20 28 l4 0 l-2 2.2Z" fill="#d98a8a"/><path d="M8 26 h8 M9 30 h7" stroke="#c9bba8" stroke-width="0.9" fill="none"/><path d="M36 26 h-8 M35 30 h-7" stroke="#c9bba8" stroke-width="0.9" fill="none"/></svg>` }}
+      {{/* 猫の顔B：三毛・頭が黒（ヘルメット）・下半分が白 */}}
+      {{ $catB := `<svg viewBox="0 0 44 44"><path d="M9 15 L7 3 L18 12Z" fill="#2a2420"/><path d="M35 15 L37 3 L26 12Z" fill="#2a2420"/><circle cx="22" cy="24" r="14" fill="#2a2420"/><path d="M10 25 C11 35 16 39 22 39 C28 39 33 35 34 25 C28 28 16 28 10 25Z" fill="#fdfcf8"/><path d="M14 29 q3 3 6 0" fill="none" stroke="#3a2f2a" stroke-width="1.8" stroke-linecap="round"/><path d="M22 29 q3 3 6 0" fill="none" stroke="#3a2f2a" stroke-width="1.8" stroke-linecap="round"/><path d="M20 32 l4 0 l-2 2.1Z" fill="#d98a8a"/><path d="M9 31 h7 M10 34 h6" stroke="#c9bba8" stroke-width="0.8" fill="none"/><path d="M35 31 h-7 M34 34 h-6" stroke="#c9bba8" stroke-width="0.8" fill="none"/></svg>` }}
+      <span class="bubble" style="--x:8%;  --size:44px; --dur:8s;   --delay:-1s; --sway-dur:2.8s;"><span class="bubble__inner">{{ $sakura | safeHTML }}</span></span>
+      <span class="bubble" style="--x:24%; --size:58px; --dur:9.5s; --delay:-5s; --sway-dur:3.3s;"><span class="bubble__inner">{{ $catA | safeHTML }}</span></span>
+      <span class="bubble" style="--x:42%; --size:40px; --dur:7s;   --delay:-3s; --sway-dur:2.4s;"><span class="bubble__inner">{{ $sakura | safeHTML }}</span></span>
+      <span class="bubble" style="--x:60%; --size:50px; --dur:8.8s; --delay:-6.5s; --sway-dur:3s;"><span class="bubble__inner">{{ $sakura | safeHTML }}</span></span>
+      <span class="bubble" style="--x:77%; --size:46px; --dur:7.6s; --delay:-2.5s; --sway-dur:2.6s;"><span class="bubble__inner">{{ $catB | safeHTML }}</span></span>
+      <span class="bubble" style="--x:90%; --size:36px; --dur:9s;   --delay:-4.5s; --sway-dur:3.1s;"><span class="bubble__inner">{{ $sakura | safeHTML }}</span></span>
+    </div>
     <div class="wrap">
       <h1 class="hero__brand">{{ site.Params.companyName }}</h1>
     </div>

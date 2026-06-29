@@ -54,6 +54,64 @@ body {
   align-items: flex-end;
   gap: 2px;
   pointer-events: none;
+  z-index: 2;
+}
+
+/* サイダーの泡（猫＆桜が立ち上って弾ける） */
+.hero .wrap { position: relative; z-index: 2; }
+.hero__bubbles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.bubble {
+  position: absolute;
+  left: var(--x);
+  bottom: -8%;
+  width: var(--size, 30px);
+  height: var(--size, 30px);
+  animation: bubble-rise var(--dur, 8s) linear var(--delay, 0s) infinite;
+  will-change: transform, opacity;
+}
+.bubble__inner {
+  display: block;
+  width: 100%;
+  height: 100%;
+  animation: bubble-sway var(--sway-dur, 3s) ease-in-out infinite alternate;
+}
+.bubble svg { display: block; width: 100%; height: 100%; }
+.bubble::after {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  border-radius: 50%;
+  border: 2px solid rgba(224, 122, 150, .6);
+  opacity: 0;
+  animation: bubble-pop var(--dur, 8s) linear var(--delay, 0s) infinite;
+}
+
+@keyframes bubble-rise {
+  0%   { transform: translateY(0)     scale(.5);   opacity: 0; }
+  10%  { transform: translateY(-6vh)  scale(.85);  opacity: .9; }   /* 立ち上り始めは小さめ */
+  72%  { transform: translateY(-54vh) scale(1.05); opacity: .9; }   /* ゆっくり上る */
+  90%  { transform: translateY(-75vh) scale(1.1);  opacity: .9; }   /* もっと上まで上がって */
+  95%  { transform: translateY(-78vh) scale(1.28); opacity: .55; }  /* 上端付近で軽く弾ける */
+  100% { transform: translateY(-79vh) scale(1.4);  opacity: 0; }    /* ふわっと消える */
+}
+@keyframes bubble-pop {
+  0%, 89% { transform: scale(.6);  opacity: 0; }
+  95%     { transform: scale(.95); opacity: .5; }   /* 控えめなリングが出現 */
+  100%    { transform: scale(1.7); opacity: 0; }    /* そっと広がって消える */
+}
+@keyframes bubble-sway {
+  from { transform: translateX(-9px) rotate(-14deg); }
+  to   { transform: translateX(9px)  rotate(14deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__bubbles { display: none; }
 }
 
 /* About */
